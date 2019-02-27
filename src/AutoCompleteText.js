@@ -75,6 +75,10 @@ export default class AutoCompleteText extends React.Component {
         this.setState(() => ({ suggestions }))
     }
 
+    renderSuggestions(){
+        const { suggestions } = this.state
+    }
+
     render(){
         return (
             <div>
