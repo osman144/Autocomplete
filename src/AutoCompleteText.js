@@ -83,7 +83,7 @@ export default class AutoCompleteText extends React.Component {
         return (
             <ul>
                 {/* Show all items in list */}
-                {this.suggestions.map((item) => <li>{item}</li>)}
+                {suggestions.map((item) => <li>{item}</li>)}
             </ul>
         )
     }
