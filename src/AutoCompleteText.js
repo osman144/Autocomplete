@@ -77,16 +77,22 @@ export default class AutoCompleteText extends React.Component {
 
     renderSuggestions(){
         const { suggestions } = this.state
+        if(suggestions.length === 0){
+            return null;
+        }
+        return (
+            <ul>
+                {/* Show all items in list */}
+                {this.suggestions.map((item) => <li>{item}</li>)}
+            </ul>
+        )
     }
 
     render(){
         return (
             <div>
                 <input onChange={onTextChange} type="text" />
-                <ul>
-                    {/* Show all items in list */}
-                    {this.items.map((item) => <li>{item}</li>)}
-                </ul>
+                renderSuggestions()
             </div>
         )
     }
