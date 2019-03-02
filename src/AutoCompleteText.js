@@ -70,7 +70,7 @@ export default class AutoCompleteText extends React.Component {
         let suggestions = [];
         if(value.length > 0) {
             const regex = new RegExp(`^${value}`, 'i')
-            suggestions = this.items.sort().filter(v => v.test(regex));
+            suggestions = this.items.sort().filter(v => regex.test(v));
         }
         this.setState(() => ({ suggestions }))
     }
