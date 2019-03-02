@@ -92,7 +92,7 @@ export default class AutoCompleteText extends React.Component {
         return (
             <div>
                 <input onChange={onTextChange} type="text" />
-                renderSuggestions()
+                {this.renderSuggestions()}
             </div>
         )
     }
